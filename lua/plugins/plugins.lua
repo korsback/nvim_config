@@ -1,19 +1,13 @@
 return {
   {
-    "nvim-tree/nvim-tree.lua",
-    version = "*",
-    lazy = false,
+    "nvim-neo-tree/neo-tree.nvim",
+    branch = "v3.x",
     dependencies = {
+      "nvim-lua/plenary.nvim",
+      "MunifTanjim/nui.nvim",
       "nvim-tree/nvim-web-devicons",
     },
-    keys = {
-      { '<leader>t', '<cmd>NvimTreeToggle<CR>', desc = 'Toggle file explorer' },
-      { '<leader>tf', '<cmd>NvimTreeFocus<CR>', desc = 'Focus file explorer' },
-      { '<leader>tff', '<cmd>NvimTreeFindFileToggle<CR>', desc = 'Find current file in tree' },
-    },
-    config = function()
-      require("nvim-tree").setup {}
-    end
+    lazy = false
   },
   {
     'nvim-telescope/telescope.nvim', tag = '0.1.8', 
